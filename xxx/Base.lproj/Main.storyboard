@@ -22,32 +22,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdp-G1-lbW">
-                                <rect key="frame" x="164" y="443" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="171" y="443" width="32" height="30"/>
+                                <state key="normal" title="right"/>
                                 <connections>
                                     <action selector="changeDivider:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tgh-4I-Hg1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fU-fA-RSL">
-                                <rect key="frame" x="60" y="443" width="30" height="30"/>
+                                <rect key="frame" x="67" y="443" width="30" height="30"/>
                                 <state key="normal" title="left"/>
                                 <connections>
                                     <action selector="left:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RWK-EE-vSc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7d-bJ-27d">
+                                <rect key="frame" x="172" y="543" width="30" height="30"/>
+                                <state key="normal" title="play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pmg-Xe-FaI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ity-sp-m5J">
+                                <rect key="frame" x="295" y="543" width="42" height="30"/>
+                                <state key="normal" title="pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dx8-aG-rgP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5fU-fA-RSL" firstAttribute="baseline" secondItem="Mdp-G1-lbW" secondAttribute="baseline" id="0qV-He-mGa"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5fU-fA-RSL" secondAttribute="bottom" constant="194" id="2kg-tL-atW"/>
-                            <constraint firstItem="Mdp-G1-lbW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sfy-Ik-W4s"/>
-                            <constraint firstItem="Mdp-G1-lbW" firstAttribute="leading" secondItem="5fU-fA-RSL" secondAttribute="trailing" constant="74" id="p5v-0c-l2T"/>
+                            <constraint firstItem="Mdp-G1-lbW" firstAttribute="leading" secondItem="5fU-fA-RSL" secondAttribute="trailing" constant="74" id="4ke-Jm-S1V"/>
+                            <constraint firstItem="5fU-fA-RSL" firstAttribute="baseline" secondItem="Mdp-G1-lbW" secondAttribute="baseline" id="9cY-mm-b88"/>
+                            <constraint firstItem="Mdp-G1-lbW" firstAttribute="centerX" secondItem="P7d-bJ-27d" secondAttribute="centerX" id="DBV-B2-zz3"/>
+                            <constraint firstItem="Mdp-G1-lbW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HGz-Bu-dK2"/>
+                            <constraint firstItem="Ity-sp-m5J" firstAttribute="leading" secondItem="P7d-bJ-27d" secondAttribute="trailing" constant="93" id="Z0U-du-uZI"/>
+                            <constraint firstItem="P7d-bJ-27d" firstAttribute="top" secondItem="Mdp-G1-lbW" secondAttribute="bottom" constant="70" id="dxG-pu-JmK"/>
+                            <constraint firstItem="P7d-bJ-27d" firstAttribute="baseline" secondItem="Ity-sp-m5J" secondAttribute="baseline" id="mPy-u0-eC5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="P7d-bJ-27d" secondAttribute="bottom" constant="94" id="r8Z-Ec-EFR"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-161" y="120"/>
+            <point key="canvasLocation" x="-1225" y="15"/>
         </scene>
     </scenes>
 </document>

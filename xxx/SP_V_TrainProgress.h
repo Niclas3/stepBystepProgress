@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    PROGRESS_PRIV,
+    PROGRESS_NEXT,
+} ProgressDiretion;
+
 @interface SP_V_TrainProgress : UIView
 /*
  *  绘制间隔 UIProgress 
@@ -28,13 +33,15 @@
 
 @property (nonatomic, strong) NSArray       *actionArray;
 
-// 
+//速度
+@property (nonatomic, assign) CGFloat       speed;
+
+//现在的进度
+@property (nonatomic, assign) int   currentProgress;
+
+
 - (instancetype)initWithFrame:(CGRect)frame andActionNumber:(NSArray *)actions;
-/**
- 设置进度条的宽度
- 
- @param width 宽度
- */
-- (void)setProgressWidth:(float)width;
+
+- (void)stopProgress;
 
 @end

@@ -16,6 +16,7 @@
     float _re;
     
     float ress;
+    NSArray *_actions;
 }
 @property (nonatomic, strong)  SP_V_TrainProgress *progressView;
 
@@ -29,26 +30,50 @@
     [super viewDidLoad];
     
     CGRect rect = CGRectMake(0, 300, SCREEN_WIDTH, 5);
-    NSArray *actions = [self genArrayStart:10 toEnd:20 Count:5];
-    _progressView = [[SP_V_TrainProgress alloc] initWithFrame:rect andActionNumber:actions];
+    _actions = [self genArrayStart:10 toEnd:20 Count:5];
+    _progressView = [[SP_V_TrainProgress alloc] initWithFrame:rect andActionNumber:_actions];
     _progressView.backgroundColor = RGBCOLOR(48, 47, 50);
     _progressView.foregroundColor = [UIColor orangeColor];
     _progressView.progressValue = 0;
     [self.view addSubview:_progressView];
 }
+
 - (IBAction)changeDivider:(id)sender
 {
-    ress += 1;
-    [_progressView setProgressValue:ress];
+    ress = 2;
+    if (ress >= 0 && ress <= [_actions count] ) {
+        [_progressView setAnimation:NO];
+        [_progressView setProgressValue:ress];
+        
+    } else {
+        return;
+    }
+    return;
 }
+
 - (IBAction)left:(id)sender {
     ress -= 1;
     if (ress >= 0) {
+        [_progressView setAnimation:NO];
         [_progressView setProgressValue:ress];
     } else {
         ress = 0;
     }
 }
+
+- (IBAction)play:(id)sender {
+    _progressView.animation = YES;
+    ress = [_actions count];
+    [_progressView setProgressValue:[_actions count]];
+    [_progressView setSpeed:0.5];
+}
+
+- (IBAction)pause:(id)sender
+{
+    [_progressView setAnimation:NO];
+    [_progressView stopProgress];
+}
+
 
 - (NSArray *)genArrayStart:(int)start toEnd:(int)end Count:(int)count
 {
